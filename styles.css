@@ -1,0 +1,348 @@
+/* Parametros basicos de la pagina */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Readex Pro', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Index */
+
+/* Primer gran div */
+.oneScreenSizeDiv{
+    height: 100vh;
+    width: 100%;
+}
+.greenDiv{
+    background-color: #05211A ;
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+header div{
+    padding-left: 5%;
+    padding-top: 2%;
+}
+header div img{
+    width: 16%;
+}
+
+header nav{
+    width: 35%;
+    padding-top: 2%;
+}
+
+header nav ul li{
+    display: block;
+    float: left;
+    padding:5%;
+}
+
+header nav ul li a{
+    color: white;
+    position: relative;
+}
+
+header.active{
+background-color: #05211a8f;
+transition: 1000ms;
+}
+
+header nav a:after{
+    content: "";
+    position: absolute;
+    background-color: #12D386;
+    height: 3px;
+    width: 0%;
+    top: 1.7em;
+    right: -12%;
+    transition: 0.5s;
+}
+
+header nav a:hover:after{
+    width: 120%;
+}
+
+header nav ul li a:hover{
+    color: #12D386;
+}
+
+.divIndex0{
+    padding: 14% 64% 0 5%;
+    font-size: 300%;
+    font-weight: bold;
+}
+
+.divIndex1{
+    padding: 4% 25% 0 5%;
+    font-size: 170%;
+}
+
+.redesSocialesFixed{
+    padding-top: 3%;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    z-index: 4;
+}
+
+.redesSocialesFixed img{
+    width: 25%;
+    padding-right: 6%;
+}
+.redesSocialesFixed div{
+    padding-left: 80%;
+    padding-right: 4%;
+}
+
+/* Segundo gran div */
+
+.whiteDiv{
+    background-color: white;
+}
+
+    /* Entrelineado de titulo */
+
+.tituloEntreLineas{
+    padding-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.tituloEntreLineas h1{
+    display: inline-block;
+    position: relative;
+    font-weight: lighter;
+    font-size: 25px;
+
+}
+
+.tituloEntreLineas h1::before, .tituloEntreLineas h1::after{
+    content:"";
+    position: absolute;
+    height: 3px;
+    background-color: #12D386;
+    top: 0.6em;
+}
+
+h1::before{
+    left: -180%;
+    width: 170%;
+}
+
+h1::after{
+    left: 110%;
+    width: 160%;
+}
+
+    /* Contenedor con los 3 div  */
+
+.threeDivContainer{
+    display: flex;
+    justify-content: space-between;
+    padding:4% 12% 0 12%;
+}
+
+.threeDivContainer div{
+    width: 32%;
+    height: 500px;
+    background-color: #05211A ;
+    border-radius: 25px;
+}
+
+    /* Contenedor con los 3 span */
+
+.threeSpanContainer{
+    display: flex;
+    justify-content: space-between;
+    padding:2% 12% 0 12%;
+}
+
+.threeSpanContainer div{
+    padding-left:2% ;
+}
+
+.threeSpanContainer span{
+    font-size: 18px;
+}
+
+/* Div Suscripcion */
+
+.divFormulario{
+    height: 30vh;
+    width: 100%;
+}
+
+.tituloCentrado{
+    padding-top:3%;
+}
+
+.tituloCentrado1{
+    padding-top: 1%;
+    padding-left: 35%;
+}
+
+.tituloCentrado0{
+    padding-left: 38%;
+    font-size: 20px;
+}
+.divFormulario form{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 35% 0 25%;
+}
+
+.divFormulario input{
+    margin: 0;
+    border: 0;
+    background-color: #05211A;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.divFormulario input::placeholder{ 
+    color: white;
+    font-family:'Readex Pro', sans-serif;
+    font-size: 15px;
+}
+
+.divFormulario input:focus{
+    outline: none;
+    
+}
+
+.posicionRelativa{
+    position: relative;
+}
+
+/* Tercer Div */
+
+.dosVentanasDiv{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "v0 t0"
+                         "t1  v1";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+      
+}
+
+.dosVentanasDiv0{
+    grid-area: v0;
+    padding: 15% 0 15% 15%;
+}
+
+.dosVentanasDiv0 img, .dosVentanasDiv1 img{
+    width: 90%;
+}
+
+.dosVentanasDiv1{
+    grid-area: v1;
+    padding: 8% 15% 15% 0;
+}
+
+.textoVentanasDiv0{
+    grid-area: t0;
+    padding: 19% 30% 15% 10%;
+    font-size: 15px;
+}
+
+.textoVentanasDiv1{
+    grid-area: t1;
+    padding: 12% 15% 0 25%;
+}
+
+.textoVentanasDiv1 h1,.textoVentanasDiv0 h1{
+    padding-bottom: 10%;
+    color: #05211A;
+    font-size: 35px;
+}
+.textoVentanasDiv1 p,.textoVentanasDiv0 p{
+    font-size: 20px;
+}
+
+.dosVentanasDiv button{
+    margin-top: 6%;
+    background-color: #12D386;
+    padding: 2% 3%;
+    border: 0;
+    border-radius: 20px;
+    font-family:'Readex Pro' ;
+    font-weight: 800;
+}
+
+.dosVentanasDiv button:hover{
+    background-color: #20eb9a;
+}
+
+/* Footer */
+
+.footer{
+    background-color: rgb(184, 184, 184);
+    width: 100%;
+    height: 1000px;
+    display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "l e r";
+        grid-template-columns: 25% 50% 25%;
+}
+
+.logoKiwiFooter{
+    padding-top: 25%;
+    padding-bottom: 25%;
+    grid-area: l;
+}
+
+.logoKiwiFooter img{
+    padding-left: 40%;
+    width: 40%;
+}
+
+.entradasFooter{
+    grid-area: e;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 13%;
+}
+
+.entradasFooter h3{
+    padding-bottom: 2%;
+}
+
+.entradasFooter ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.entradasFooter ul li{
+    text-decoration: none;
+    list-style: none;
+    padding-top: 10%;
+}
+
+.redesSocialesFooter{
+    grid-area: r;
+}
+.redesSocialesFooter p{
+    padding-top: 62.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
